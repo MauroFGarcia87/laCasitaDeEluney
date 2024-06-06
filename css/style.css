@@ -64,6 +64,12 @@ h2 {
 .fondoCategoria {
   background-color: #fff213;
 }
+.fondoBioleta{
+  background-color: #f288b6;
+}
+.fondoVerde{
+  background-color: #49af8f;
+}
 
 .cardImg {
   min-height: auto;
@@ -82,6 +88,16 @@ h2 {
   font-style: normal;
   font-size: 40px;
 }
+.h2FondoAmarillo{
+  background-color: #fff213; ;
+  color: #f288b6;
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+
 
 .carrusel {
   height: 300px;
@@ -118,4 +134,43 @@ h2 {
 }
 .cardMio:hover{
   transform:scale(1.1);
+}
+
+/* Animacion de girar */
+
+.cardPadre{
+  display: flex; 
+}
+.cardGira{
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.cardGira div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+      
+  backface-visibility: hidden;
+  transition: 1s;
+}
+.cardGira .front{
+  background-color: #f288b6;
+  transform: perspective(500px) rotateY(0deg);
+  align-items: center;
+  justify-content: center;
+}
+.cardGira .back{
+  background: #69d1fa;
+  transform: perspective(500px) rotateY(180deg);
+}
+.cardGira:hover .front{
+  
+  transform: perspective(500px) rotateY(180deg);
+}
+.cardGira:hover .back{
+  
+  transform: perspective(500px) rotateY(360deg);
 }
